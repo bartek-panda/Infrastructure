@@ -8,7 +8,7 @@ jenkins:
     globalMatrix:
       permissions:
         - "Overall/Administer:panda"
- numExecutors: 0
+  numExecutors: 0
   nodes:
   - permanent:
       labelString: "agent"
