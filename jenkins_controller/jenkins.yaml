@@ -21,6 +21,17 @@ jenkins:
       name: "agent"
       remoteFS: "/home/jenkins/agent"
       retentionStrategy: "always"
+  - permanent:
+      labelString: "agent"
+      launcher:
+        ssh:
+          credentialsId: "jenkins_agent"
+          host: "192.168.44.44"
+          port: 2222
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent2"
+      remoteFS: "/home/jenkins"
+      retentionStrategy: "always"
 
 credentials:
   system:
